@@ -41,7 +41,7 @@ const store = (function () {
   };
 
   const findAndToggleChecked= function(id){
-    const findThis = this.findbyId(id);
+    const findThis = store.findbyId(id);
     findThis.checked = !findThis.checked;
   };
   
