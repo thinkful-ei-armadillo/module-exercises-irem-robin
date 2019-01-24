@@ -11,12 +11,20 @@ const store = (function () {
   const hideCheckedItems = false;
   const searchTerm = '';
 
-  function findbyId(id){
+  const findbyId = function(id){
     return store.items.find(function(element) {
           return  element.id === id
     });
-  }
+  };
   
+  const toggleCheckedFilter = function(){
+    this.hideCheckedItems = !this.hideCheckedItems;
+  };
+
+  const setSearchTerm = function(arg){
+    this.searchTerm = arg;
+  };
+
   const addItem= function(name){
     // store.items.push({ id: cuid(), name: name, checked: false })
     try {
@@ -59,5 +67,7 @@ const store = (function () {
     findAndUpdateName,
     findAndToggleChecked,
     findAndDelete,
+    toggleCheckedFilter,
+    setSearchTerm
   };
 }());
