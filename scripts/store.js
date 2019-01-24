@@ -46,8 +46,8 @@ const store = (function () {
   };
   
   const findAndDelete= function(id){
-    console.log(this.items.filter(el => el.id !== id));
-    return this.items.filter(el => el.id !== id);
+    const indexFind = store.items.findIndex(el => el.id == id);
+    store.items.splice(indexFind, 1);
   };
 
   return {
