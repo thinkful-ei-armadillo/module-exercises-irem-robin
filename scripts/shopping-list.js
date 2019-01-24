@@ -1,6 +1,7 @@
 /* global store, Item */
 
 // eslint-disable-next-line no-unused-vars
+'use strict';
 const shoppingList = (function(){
 
   function generateItemElement(item) {
