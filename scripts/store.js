@@ -12,6 +12,6 @@ const store = (function () {
     return {
      items,
      hideCheckedItems,
-     searchTerm
+     searchTerm,
     };
 }());
